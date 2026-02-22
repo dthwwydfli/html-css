@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 10px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            color: blue;
+            margin: 10px;
+        }
+
+        nav li {
+            display: inline-block;
+            padding-right: 20px;
+            
+        }
+
+        p strong {
+            color: red;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: aqua;
+            padding: 5px;
+        }
+
+        .card {
+            padding: 0.5;
+            background: thistle;
+            border-radius: 2;
+        }
+
+        .list {
+            padding: 0.5;
+            font-family: sans-serif;
+            color: aqua;
+            list-style-type: lower-alpha;
+        }
+
+        table, th, td, tr {
+            border: 1px solid black;
+            border-collapse: collapse;
+          }
+          
+        td, th, tr { 
+            padding: 5px;
+        
+        }
+
+        .heading {
+            padding: 0.5;
+        }
+
+        .timetable {
+            margin-left: auto;
+            margin-right: auto;
+            width: 2px;
+        }
+
+        .cosc001w {
+            text-transform: uppercase;
+            background-color: rgb(0, 0, 128);
+            color: white;
+            
+        }
+
+        .cosc001w.tutorial {
+            text-transform: uppercase;
+            background-color: rgba(0, 0, 255, 0.5);
+            color: black;
+        }
+
+        .cosc011w {
+            text-transform: uppercase;
+            background-color: rgb(0, 128, 0);
+            color: white;
+        }
+        .cosc011w.tutorial {
+            text-transform: uppercase;
+            background-color: rgba(0, 255, 0, 0.5);
+            color: black;
+        }
+
+        .mmcs007w{
+            text-transform: uppercase;
+            background-color: rgb(128, 0, 0);
+            color: white;
+        }
+        .mmcs007w.tutorial{
+            text-transform: uppercase;
+            background-color: rgba(255, 0, 0, 0.5);
+            color: black;
+        }
+
+        .lunch {
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .free-day {
+            text-transform: uppercase;
+        }
+
+        .timetable td{
+            width: 10px;
+            height: 10px;
+        }
+
+        #student-id {
+            font-family: monospace;
+            font-weight: bold;
+            color: darkblue;
+        }
+
+        #page-footer{
+            background-color: aqua;
+            padding: 10px;
+            text-align: center;
+            border-top: 2px solid black;
+        }
+
+
+    </style>
+</head>
+
+<header class="card">
+    <h1>Tutorial 1</h1>
+    <style>
+        .active {
+            background-color: white;
+        }
+
+        .id{
+            font-family: monospace;
+        }
+
+        .card {
+            padding: 0.5;
+            background: fixed;
+            border-radius: 2;
+        }
+
+    </style>
+    <nav>
+        <ul>
+            <li><a class="active" href="#">Week 1 </a></li>
+            <li><a class="active" href="#">Week 2</a></li>
+            <li><a href="#">Week 3</a></li>
+            <li><a href="#">Week 4</a></li>
+            <li><a href="#">Week 5</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+<body class="card">
+<h2>Personal Introduction</h2>
+<p >
+    <b >
+        <strong><u>Istiaq</u> Abdullah</strong>
+        <code class="id" id="student-id">w2063860</code>
+    </b>
+</p>
+<p>
+    Year 1
+</p>
+<p>
+    Web design
+</p>
+</body>
+
+<body class="card">
+    <h2>Module expectations</h2>
+    <p >
+        1<sup>st</sup>
+        html
+    </p>
+    <p>
+        2<sup>nd</sup>
+        css
+    </p>
+    <p>
+        3<sup>rd</sup>
+        javascript
+    </p>
+    <p>
+        What I learnt today is understanding html and css, introduction to html tags
+    </p>
+</body>
+
+<body class="card">
+    <h2>Reflection</h2>
+    <p>
+        I found challenging to undertand how to style css and had to reflect on it as there is many ways to style it.
+        I found challenging when having to create the classes for each class and assign them.
+    </p>
+    <p>
+        I found intresting and surprising how you can code html and css in the same file and will reflect on it and try improve myself so that I am able to style css in different format.
+        I found intresting and surprising how you can style any elements using html.
+    </p>
+    <p>
+        I am confident about understanding html and will reflect on it and improve myself so that I am able to do it without struggling and can make different type of websites.
+        I am confident about understanding html and css and will reflect on it to improve so that I am able to style anything without issues and taking too much time to think.
+    </p>
+    <ol>
+        <li>I found challenging to undertand how to color tables and style lists and tables</li>
+        <li>I found challenging on figuring out how to create the rows and columns when creating the timetable</li>
+        
+    </ol>
+    <ul>
+        <li>I found intresting and surprising on how to create table rows and columns</li>
+        <li>I found intresting and surprising on how to color each box in the tables</li>
+    </ul>
+
+</body>
+
+<body class="card">
+    <h2>My 2 truths and a lie</h2>
+    <ol class="list">
+        <li>I study computer science</li>
+        <li>I play football</li>
+        <li>I do accounting</li>
+    </ol>
+
+    <h2>2 Truths and a Lie - Game Results</h2>
+    <table class="heading">
+        <thead>
+            <tr>
+                <th>Statement</th>
+                <th>True Votes</th>
+                <th>False Votes</th>
+                <th>Actual Votes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>I study computer science</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>I play football</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>I do accounting</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+<body>
+    <h2>My timetable</h2>
+<table class="timetable">
+    <thead>
+        <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>9-11am</th>
+            <td class="cosc001w lecture">lecture</td>
+            <td class="cosc011w lecture">lecture</td>
+            <td rowspan="2" class="free-day">Free day</td>
+            <td rowspan="2" class="free-day">Free day</td>
+            <td rowspan="2" class="free-day">Free day</td>
+        </tr>
+        <tr>
+            <th >11am-1pm</th>
+            <td class="mmcs007w lecture">lecture</td>
+            <td class="cosc001w tutorial">tutorial</td>
+            
+            
+        </tr>
+        <tr>
+            <th>1-2pm</th>
+            <td colspan="5" class="lunch">Lunch</td>
+            
+            
+    
+        </tr>
+        <tr>
+            <th>2-4pm</th>
+            <td rowspan="2" class="free-day">Free day</td>
+            <td rowspan="2" class="free-day">Free day</td>
+            <td rowspan="2" class="free-day">Free day</td>
+            <td class="cosc011w tutorial">tutorial</td>
+            <td rowspan="2" class="free-day">Free day</td>
+        </tr>
+        <tr>
+            <th>4-6pm</th>
+            <td class="mmcs007w tutorial">tutorial</td>
+            
+        </tr>
+    </tbody>
+</table>
+</body>
+
+<hr>
+
+<footer class="card" id="page-footer">
+    <address>w2063860@westminster.ac.uk</address>
+    Last modified date: 22/01/26
+    
+</footer>
+</main>
+
+</html>
