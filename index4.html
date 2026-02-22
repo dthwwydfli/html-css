@@ -1,0 +1,903 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials</title>
+    <style>
+        /*General*/
+        body {
+            font-family: sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: bold;
+            color: darkblue;
+        }
+
+        h2 {
+            margin: 10px;
+        }
+
+        nav li {
+            display: inline-block;
+            padding-right: 20px;
+        }
+
+        p strong {
+            color: #2c3e50;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        .welcome {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .welcome h1 {
+            color: #2c3e50;
+        }
+
+        .main-card {
+            background-color: white;
+            max-width: 800px;
+            margin: 10px auto;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .main-card h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+
+        .title {
+            color: #2c3e50;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .profile-img img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 0 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+            margin-bottom: 20px;
+
+        }
+
+        .intro-txt {
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        .id-badge {
+            background-color: #eee;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+
+        .action-buttons {
+            margin: 25px 0 35px 0;
+        }
+
+        .mail-btn,
+        .social-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            text-decoration: none;
+            color: white;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 0 5px;
+            transition: opacity 0.3s;
+        }
+
+        .mail-btn {
+            background-color: #5dade2;
+        }
+
+        .social-btn {
+            background-color: #555;
+        }
+
+        .mail-btn:hover,
+        .social-btn:hover {
+            opacity: 0.8;
+        }
+
+
+        hr {
+            border: 0;
+            border-top: 1px solid #eee;
+            margin: 20px 0;
+        }
+
+
+        .useful-links-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .useful-links-list li {
+            margin: 10px 0;
+        }
+
+        .useful-links-list a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .useful-links-list a:hover {
+            text-decoration: underline;
+            color: #2c3e50;
+        }
+
+        .useful-links-list a:visited{
+            color: #3498db;
+        }
+
+        .card {
+            padding: 10px;
+            background: thistle;
+            border-radius: 5px;
+        }
+
+        .list {
+            padding-left: 0;
+            margin-top: 0;
+            font-family: sans-serif;
+            color: #2c3e50;
+            list-style-type: lower-alpha;
+            list-style-position: inside;
+        }
+
+        table,
+        th,
+        td,
+        tr {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td,
+        th,
+        tr {
+            padding: 5px;
+
+        }
+
+        .heading {
+            padding: 5px;
+        }
+
+        .active {
+            background-color: #5dade2;
+            border-radius: 20px;
+            color: white;
+        }
+
+        .id {
+            font-family: monospace;
+
+        }
+
+
+        img {
+            border-radius: 20px;
+            box-shadow: 10px 10px 5px;
+            max-width: min-content;
+            width: 200px;
+            height: auto;
+        }
+
+        /*timetable related*/
+        .timetable {
+            width: 100%;
+            max-width: 800px;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-size: 1.1rem;
+        }
+
+        .timetable th,
+        .timetable td {
+            border: 2px solid #333;
+            padding: 15px;
+            text-align: center;
+            vertical-align: middle;
+            height: 60px;
+        }
+
+        .timetable th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .cosc001w {
+            text-transform: uppercase;
+            background-color: rgb(0, 0, 128);
+            color: white;
+            font-weight: bold;
+
+        }
+
+        .cosc001w.tutorial {
+            text-transform: uppercase;
+            background-color: rgba(0, 0, 255, 0.5);
+            color: black;
+        }
+
+        .cosc011w {
+            text-transform: uppercase;
+            background-color: rgb(0, 128, 0);
+            color: white;
+            font-weight: bold;
+        }
+
+        .cosc011w.tutorial {
+            text-transform: uppercase;
+            background-color: rgba(0, 255, 0, 0.5);
+            color: black;
+        }
+
+        .mmcs007w {
+            text-transform: uppercase;
+            background-color: rgb(128, 0, 0);
+            color: white;
+            font-weight: bold;
+        }
+
+        .mmcs007w.tutorial {
+            text-transform: uppercase;
+            background-color: rgba(255, 0, 0, 0.5);
+            color: black;
+        }
+
+        .lunch {
+            text-transform: uppercase;
+            text-align: center;
+            background-color: lightyellow;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .free-day {
+            text-transform: uppercase;
+            color: #555;
+            background-color: white;
+            font-style: italic;
+        }
+
+
+        /*ID's*/
+
+        #student-id {
+            font-family: monospace;
+            font-weight: bold;
+            color: darkblue;
+        }
+
+        #page-footer {
+            background-color: #34495e; 
+            color: #ecf0f1;            
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;          
+        }
+
+        #page-footer p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+        
+        #page-footer address {
+            font-style: normal;
+        }
+
+        #intro {
+            padding: 5px;
+        }
+
+        #ref {
+            padding: 5px;
+        }
+
+        #ttb {
+            padding: 5px;
+        }
+
+        #contact {
+            padding: 5px;
+        }
+
+        /*buttons and navigations*/
+        .top-nav {
+            background-color: #34495e;
+            text-align: center;
+            padding: 2px 0;
+        }
+
+        .top-nav a {
+            color: #bbbbbb;
+            text-decoration: none;
+            padding: 8px 15px;
+            font-weight: bold;
+        }
+
+        .top-nav a:hover {
+            background-color: #22313f;
+            border-radius: 20px;
+        }
+
+        .top-nav a.active {
+            background-color: #3498db;
+            color: white;
+            border-radius: 20px;
+        }
+
+        .round-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .round-btn:hover {
+            background-color: #2980b9;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: lightgray;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: transparent;
+            color: white;
+        }
+
+        .section-nav button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .section-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .external {
+            color: red;
+            font-weight: bold;
+        }
+
+        .external:hover {
+            color: darkred;
+            text-decoration: underline;
+        }
+
+        a.external-links:visited {
+            color: darkred;
+        }
+
+        .section-nav button:hover {
+            background-color: darkblue;
+        }
+
+        .back-top-btn {
+            display: inline-block;
+            color: #7f8c8d;       
+            font-size: 0.9rem;
+            border: 1px solid #ccc;
+            padding: 5px 15px;
+            border-radius: 20px;
+            transition: 0.3s;
+            
+        }
+
+        .back-top-btn:hover {
+            background-color: #34495e;
+            color: white;
+            border-color: #34495e;
+        }
+
+        /*reflection*/
+        .reflection {
+            text-align: left;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .reflection h3 {
+            margin-top: 10px;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+
+        .reflection ul,
+        .reflection ol {
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+
+        .reflection li {
+            margin-bottom: 10px;
+        }
+
+        /*form*/
+
+        .styled-form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+
+        .styled-form fieldset {
+            border: 2px solid #34495e;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+        }
+
+        .styled-form legend {
+            background-color: #34495e;
+            color: white;
+            padding: 5px 15px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .styled-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .styled-form input[type="text"],
+        .styled-form input[type="email"],
+        .styled-form input[type="tel"],
+        .styled-form select,
+        .styled-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            float: none;
+            font-family: sans-serif;
+            transition: 0.3s;
+        }
+
+        .styled-form input:focus,
+        .styled-form select:focus,
+        .styled-form textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+            background-color: #ffffef;
+        }
+
+        .float-container {
+            width: 100%;
+        }
+
+        .float-left {
+            float: left;
+            width: 48%;
+        }
+
+        .float-right {
+            float: right;
+            width: 48%;
+        }
+
+        .option-group {
+            margin-bottom: 8px;
+        }
+
+        .styled-form input[type="radio"],
+        .styled-form input[type="checkbox"] {
+            margin-right: 8px;
+            transform: scale(1.2);
+            width: auto;
+            float: none;
+        }
+
+        .form-buttons {
+            clear: both;
+            text-align: center;
+            margin-top: 10px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .styled-form input[type="submit"],
+        .styled-form input[type="reset"] {
+            padding: 12px 25px;
+            margin: 0 10px;
+            background-color: #34495e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            width: auto;
+            float: none;
+        }
+
+        .styled-form input[type="submit"]:hover,
+        .styled-form input[type="reset"]:hover {
+            background-color: #3498db;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+
+        <nav class="top-nav">
+            <ul>
+                <li><a href="../Week1/index.html">Week 1</a></li>
+                <li><a href="../Week2/index.html">Week 2</a></li>
+                <li><a href="../Week3/index.html">Week 3</a></li>
+                <li><a class="active" href="../Week4/index.html">Week 4</a></li>
+                <li><a href="#">Week 5</a></li>
+            </ul>
+        </nav>
+        <div>
+            <div class="welcome">
+                <h1>Welcome to Web Design and Development</h1>
+
+                <div class="section-nav" aria-label="section links">
+                    <a class="round-btn" href="#intro">Introduction</a>
+                    <a class="round-btn" href="#ttb">Timetable</a>
+                    <a class="round-btn" href="#ref">Reflection</a>
+                    <a class="round-btn" href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="main-card">
+            <h2 id="intro">Personal Introduction</h2>
+            <div class="profile-img">
+                <img src="icon.jpg" alt="Profile icon">
+                <img src="notebook.png" alt="Notebook">
+            </div>
+            <p class="intro-txt">
+                <strong><u>Istiaq</u> Abdullah</strong><br>
+                <span class="id-badge" id="student-id">w2063860</span>
+
+
+            </p>
+            <p>Currently in: <strong>Year 1</strong> | Module: <strong>Web Design and Development</strong></p>
+
+            <div class="action-buttons">
+                <a href="mailto:w2063860@westminster.ac.uk" aria-label="Send an email to Istiaq" class="mail-btn">Mail
+                    me</a>
+                <a target="_blank" href="https://uk.linkedin.com/in/istiaqabdullah" target="_blank" class="social-btn">LinkedIn</a>
+                <a target="_blank" href="https://github.com/dthwwydfli" class="social-btn">GitHub</a>
+            </div>
+
+
+            <hr>
+            <h3 class="title">Useful links</h3>
+            <ul class="useful-links-list">
+                <li><a class="external" target="_blank" href="https://learning.westminster.ac.uk/ultra/course">
+                        Blackboard
+                    </a></li>
+                <li><a class="external" target="_blank" href="http://westminster.ac.uk"> University of
+                        Westminster </a></li>
+                <li><a class="external" target="_blank" href="https://timetabling.westminster.ac.uk/Web/Timetable">
+                        University Timetable </a></li>
+            </ul>
+        </div>
+
+
+
+
+
+
+        <div class="main-card">
+            <h2>Module expectations</h2>
+            <p>
+                1<sup>st</sup>
+                Understanding HTML
+            </p>
+            <p>
+                2<sup>nd</sup>
+                Understanding CSS
+            </p>
+            <p>
+                3<sup>rd</sup>
+                Understanding JavaScript
+            </p>
+
+
+            <h2>Goals for this module</h2>
+            <p> In this module I want to become good at coding HTML, CSS and
+                JavaScript so that way I can implement it in
+                other aspects of my life.</p>
+
+            <h2>Interests and Hobbies</h2>
+            <p>I enjoy going to the gym, attending mma classes and eating food.</p>
+            <p>I also enjoy going on travelling and going on hikes, this year I
+                want to travel to a number of countries
+                and try different cusines.</p>
+        </div>
+
+
+
+
+        <div class="main-card">
+
+            <h2>My two Truths and a Lie</h2>
+            <ol class="list" style="display: inline-block; text-align: left;">
+                <li>I study computer science</li>
+                <li>I play football</li>
+                <li>I do accounting</li>
+            </ol>
+            <h2>Truths and a Lie - Game Results</h2>
+            <table class="heading" style="margin: 0 auto;">
+                <thead>
+                    <tr>
+                        <th>Statement</th>
+                        <th>True Votes</th>
+                        <th>False Votes</th>
+                        <th>Actual Votes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>I study computer science</td>
+                        <td>12</td>
+                        <td>4</td>
+                        <td style="color: green; font-weight: bold;">True</td>
+                    </tr>
+                    <tr>
+                        <td>I play football</td>
+                        <td>8</td>
+                        <td>3</td>
+                        <td style="color: green; font-weight: bold;">True</td>
+
+                    </tr>
+                    <tr>
+                        <td>I do accounting</td>
+                        <td>5</td>
+                        <td>4</td>
+                        <td style="color: red; font-weight: bold;">False</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <div class="main-card">
+            <h2 id="ttb">Timetable</h2>
+            <table class="timetable">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>9-11am</th>
+                        <td class="cosc001w lecture">lecture</td>
+                        <td class="cosc011w lecture">lecture</td>
+                        <td rowspan="2" class="free-day">Free day</td>
+                        <td rowspan="2" class="free-day">Free day</td>
+                        <td rowspan="2" class="free-day">Free day</td>
+                    </tr>
+                    <tr>
+                        <th>11am-1pm</th>
+                        <td class="mmcs007w lecture">lecture</td>
+                        <td class="cosc001w tutorial">tutorial</td>
+
+                    </tr>
+                    <tr>
+                        <th>1-2pm</th>
+                        <td colspan="5" class="lunch">Lunch</td>
+
+                    </tr>
+                    <tr>
+                        <th>2-4pm</th>
+                        <td rowspan="2" class="free-day">Free day</td>
+                        <td rowspan="2" class="free-day">Free day</td>
+                        <td rowspan="2" class="free-day">Free day</td>
+                        <td class="cosc011w tutorial">tutorial</td>
+                        <td rowspan="2" class="free-day">Free day</td>
+                    </tr>
+                    <tr>
+                        <th>4-6pm</th>
+                        <td class="mmcs007w tutorial">tutorial</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <div class="main-card">
+
+            <h2 id="ref">Reflection</h2>
+            <div class="reflection">
+                <p>
+                    I found challenging to undertand how to style css and had to
+                    reflect on it as there is many ways to style it.
+                    I found challenging when having to create the classes for each
+                    class and assign them.
+                </p>
+                <p>
+                    I found intresting and surprising how you can code html and css
+                    in the same file and will reflect on it and try improve myself
+                    so that
+                    I am able to style css in different format.
+                    I found intresting and surprising how you can style any elements
+                    using html.
+                </p>
+                <p>
+                    I am confident about understanding html and will reflect on it
+                    and improve myself so that I am able to do it without struggling
+                    and
+                    can make different type of websites.
+                    I am confident about understanding html and css and will reflect
+                    on it to improve so that I am able to style anything without
+                    issues
+                    and taking too much time to think.
+                </p>
+                <ol>
+                    <li>I found challenging to undertand how to color tables and
+                        style lists and tables</li>
+                    <li>I found challenging on figuring out how to create the rows
+                        and columns when creating the timetable</li>
+
+                </ol>
+                <ul>
+                    <li>I found intresting and surprising on how to create table
+                        rows and columns</li>
+                    <li>I found intresting and surprising on how to color each box
+                        in the tables</li>
+                </ul>
+            </div>
+        </div>
+
+
+    <div class="main-card">
+        <h2 id="contact">Contact me</h2>
+        <form class="styled-form" action="mailto:w2063860@westminster.ac.uk" method="post" enctype="text/plain">
+
+            <fieldset>
+                <legend>Contact Details</legend>
+                <div class="form-group">
+                    <label for="name">Name: <span style="color:red">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: <span style="color:red">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="role">Role:</label>
+                    <select id="role" name="role">
+                        <option value="student">Student</option>
+                        <option value="tutor">Tutor</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Survey</legend>
+
+                <div class="float-container">
+                    <div class="float-left">
+                        <p><strong>Interests:</strong></p>
+                        <div class="option-group">
+                            <input type="checkbox" id="html" name="interests" value="HTML" checked>
+                            <label style="display:inline" for="html">HTML</label>
+                        </div>
+                        <div class="option-group">
+                            <input type="checkbox" id="css" name="interests" value="CSS">
+                            <label style="display:inline" for="css">CSS</label>
+                        </div>
+                    </div>
+
+                    <div class="float-right">
+                        <p><strong>Best Time:</strong></p>
+                        <div class="option-group">
+                            <input type="radio" id="am" name="time" value="morning">
+                            <label style="display:inline" for="am">Morning</label>
+                        </div>
+                        <div class="option-group">
+                            <input type="radio" id="pm" name="time" value="afternoon">
+                            <label style="display:inline" for="pm">Afternoon</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset style="clear: both;">
+                <legend>Message</legend>
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+            </fieldset>
+
+            <div class="form-buttons">
+                <input type="reset" value="Reset">
+                <input type="submit" value="Send">
+            </div>
+        </form>
+
+        <div style="margin-top: 20px;">
+            <a href="#" class="back-top-btn">Back to top</a>
+        </div>
+    </div>
+    </main>
+    
+    
+    <footer id="page-footer">
+        <address>w2063860@westminster.ac.uk</address>
+        Last modified date: 06/02/26
+    </footer>
+
+</body>
+
+</html>
